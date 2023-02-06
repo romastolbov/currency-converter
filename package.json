@@ -2,6 +2,7 @@
   "name": "currency-converter",
   "version": "1.0.0",
   "private": false,
+  "author": "Roma Stolbov",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",

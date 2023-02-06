@@ -1,17 +1,22 @@
-import { API_URL } from "@/utils/constants"
+import { API_URL } from "@/utils/constants";
 
-import type { TExchangeService } from "./types"
+import type { TExchangeModel } from "./exchangeModel";
+import type { TExchangeService } from "./types";
 
 export const exchangeService: TExchangeService = () => {
   return {
     getRates: async () => {
       try {
-        const res = await (await fetch(API_URL)).json()
-        return res.Valute
+        const response = await (await fetch(API_URL)).json();
+
+        if (!response || !response?.Valute) return [];
+
+        const result: TExchangeModel[] = Object.values(response?.Valute);
+        return result;
       } catch (e: unknown) {
-        console.debug(e)
-        throw e
+        console.debug(e);
+        throw e;
       }
-    }
-  }
-}
+    },
+  };
+};

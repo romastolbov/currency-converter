@@ -1,6 +1,9 @@
 export type TExchangeModel = {
-  userId: number
-  id: number
-  title: string
-  body: string
-}
+  ID: string;
+  NumCode: string;
+  CharCode: string;
+  Nominal: number;
+  Name: string;
+  Value: number;
+  Previous: number;
+};

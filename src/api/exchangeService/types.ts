@@ -1,5 +1,5 @@
-import type { TExchangeModel } from "./exchangeModel"
+import type { TExchangeModel } from "./exchangeModel";
 
-export type TExchangeService<T = TExchangeModel>  = () => {
-  getRates: () => Promise<T>
-}
+export type TExchangeService<T = TExchangeModel> = () => {
+  getRates: () => Promise<T[]>;
+};
