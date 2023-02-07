@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed, Ref } from "vue";
-import { useExchangeStore } from "@/stores/exchange";
-
 import type { TExchangeModel } from "@/api/exchangeService/exchangeModel";
 
 defineProps<{
@@ -17,7 +14,8 @@ const fieldNames = {
   value: "selectValue",
 };
 
-const selectHandler = (_, selectedOption) => emit("onSelect", selectedOption);
+const selectHandler = (value: string, selectedOption: TExchangeModel) =>
+  emit("onSelect", selectedOption);
 </script>
 
 <template>

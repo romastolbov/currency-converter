@@ -6,13 +6,14 @@ defineProps<{
 
 const emit = defineEmits(["onSearch"]);
 
-const searchHandler = (searchValue) => emit("onSearch", searchValue);
+const searchHandler = (searchValue: string) => emit("onSearch", searchValue);
 </script>
 
 <template>
   <a-form layout="vertical">
     <a-form-item :label="label">
       <a-input-search
+        size="large"
         :placeholder="placeholder"
         :allowClear="true"
         @search="searchHandler"

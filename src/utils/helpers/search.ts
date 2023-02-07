@@ -1,4 +1,4 @@
-import { TExchangeModel } from "@/api/exchangeService/exchangeModel";
+import type { TExchangeModel } from "@/api/exchangeService/exchangeModel";
 
 const search = (currency: TExchangeModel, searchValue: string) => {
   const name = currency.Name.toLowerCase();

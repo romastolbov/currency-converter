@@ -10,11 +10,7 @@ const listItemRender = (
   const baseChar = baseCurrency.CharCode;
   const exchangeChar = exchangeCurrency.CharCode;
   const exchangeName = exchangeCurrency.Name;
-  const exchangeResult = exchanger(
-    baseNominal,
-    baseCurrency,
-    exchangeCurrency
-  ).toFixed(4);
+  const exchangeResult = exchanger(baseCurrency, exchangeCurrency).toFixed(4);
 
   return `${baseNominal} ${baseChar} – ${exchangeResult} ${exchangeChar} (${exchangeName})`;
 };

@@ -1,4 +1,4 @@
-import { ref, computed, Ref, ComputedRef } from "vue";
+import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
 import { api } from "@/api";
@@ -7,6 +7,7 @@ import { BASE_CURRENCY } from "@/utils/constants";
 import search from "@/utils/helpers/search";
 
 import type { TExchangeModel } from "@/api/exchangeService/exchangeModel";
+import type { Ref, ComputedRef } from "vue";
 
 export const useExchangeStore = defineStore("exchange", () => {
   // Список валют

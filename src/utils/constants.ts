@@ -1,5 +1,4 @@
 import type { TExchangeModel } from "@/api/exchangeService/exchangeModel";
-import type { TTabs } from "@/components/CETabs.vue";
 
 export const API_URL: string = "https://www.cbr-xml-daily.ru/daily_json.js";
 
@@ -15,7 +14,7 @@ export const BASE_CURRENCY: TExchangeModel = {
   Previous: 0,
 };
 
-export const TABS: TTabs[] = [
+export const TABS = [
   {
     id: 1,
     name: "Список валют",
@@ -27,3 +26,6 @@ export const TABS: TTabs[] = [
     slot: "secondTab",
   },
 ];
+
+export const APP_REPOSITORY: string =
+  "https://github.com/romastolbov/currency-converter";

@@ -11,6 +11,7 @@ export const exchangeService: TExchangeService = () => {
 
         if (!response || !response?.Valute) return [];
 
+        // @ts-ignore
         const result: TExchangeModel[] = Object.values(response?.Valute);
         return result;
       } catch (e: unknown) {
